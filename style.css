@@ -1,21 +1,36 @@
 body {
-  background-color: black;
+  background-color: rgb(4, 28, 60);
 }
 .header {
   display: flex;
   justify-content: center;
   color: white;
 }
-.grid {
+#grid {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 650px;
+
+  background-color: rgba(143, 141, 206, 0.39);
+  border-radius: 10px;
 }
-.container {
+#container {
   display: flex;
   justify-content: center;
   width: 600px;
   height: 600px;
   border: 2px solid black;
   background-color: white;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 2em;
 }
