@@ -72,9 +72,6 @@ function changePixels(event) {
   console.log(choice);
 }
 clearBtn.addEventListener("click", clear);
-colorBtn.forEach((button) => {
-  button.addEventListener("click", changeColor);
-});
 eraserBtn.addEventListener("click", eraser);
 rainbowBtn.addEventListener("click", rainbow);
 pixelsBtn.forEach((button) => {
