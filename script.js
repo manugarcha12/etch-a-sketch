@@ -1,13 +1,16 @@
 let pixels = 32;
 let container = document.querySelector("#container");
 let color = "black";
-const clearBtn = document.querySelector("#reset");
+let clearBtn = document.querySelector("#reset");
 let grid = document.querySelector("#grid");
 let newDiv = document.querySelectorAll(".newdiv");
 let colorBtn = document.querySelector("#color");
 let eraserBtn = document.querySelector("#eraser");
 let rainbowBtn = document.querySelector("#rainbow");
-let pixelsBtn = document.querySelector("#pixels");
+let sizeOne = document.querySelector("#sizeOne");
+let sizeTwo = document.querySelector("#sizeTwo");
+let sizeThree = document.querySelector("#sizeThree");
+
 let rainbowMode = false;
 
 function createDivs() {
@@ -73,15 +76,20 @@ function rainbow() {
   return color;
 }
 
-function changePixels() {
+function changePixels(event) {
   rainbowMode = false;
-  let choice = prompt("Choose between 1 and 100");
+  let choice = event.target.innerText.substring(0, 2);
   pixels = choice;
   clear();
+  console.log(choice);
 }
 clearBtn.addEventListener("click", clear);
 colorBtn.addEventListener("click", changeColor);
 eraserBtn.addEventListener("click", eraser);
 rainbowBtn.addEventListener("click", rainbow);
-pixelsBtn.addEventListener("click", changePixels);
+sizeOne.addEventListener("click", changePixels);
+sizeTwo.addEventListener("click", changePixels);
+sizeThree.addEventListener("click", changePixels);
+
 createDivs();
+console.log(rainbowMode);
