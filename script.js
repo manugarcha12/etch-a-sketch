@@ -7,9 +7,7 @@ let newDiv = document.querySelectorAll(".newdiv");
 let colorBtn = document.querySelector("#color");
 let eraserBtn = document.querySelector("#eraser");
 let rainbowBtn = document.querySelector("#rainbow");
-let sizeOne = document.querySelector("#sizeOne");
-let sizeTwo = document.querySelector("#sizeTwo");
-let sizeThree = document.querySelector("#sizeThree");
+let pixelsBtn = document.querySelectorAll("#pixels");
 
 let rainbowMode = false;
 
@@ -87,9 +85,9 @@ clearBtn.addEventListener("click", clear);
 colorBtn.addEventListener("click", changeColor);
 eraserBtn.addEventListener("click", eraser);
 rainbowBtn.addEventListener("click", rainbow);
-sizeOne.addEventListener("click", changePixels);
-sizeTwo.addEventListener("click", changePixels);
-sizeThree.addEventListener("click", changePixels);
+pixelsBtn.forEach((button) => {
+  button.addEventListener("click", changePixels);
+});
 
 createDivs();
 console.log(rainbowMode);
