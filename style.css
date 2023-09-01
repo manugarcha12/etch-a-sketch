@@ -11,13 +11,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 650px;
-
+  gap: 20px;
   background-color: rgba(143, 141, 206, 0.39);
   border-radius: 10px;
 }
 #container {
   display: flex;
   justify-content: center;
+
   width: 600px;
   height: 600px;
   border: 2px solid black;
@@ -27,10 +28,24 @@ body {
 .options {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
   gap: 10px;
 }
 
 button {
   padding: 15px;
+  width: 200px;
   font-size: 2em;
+}
+
+button:hover {
+  scale: 1.08;
+  transition: 0.5s ease-in-out;
+}
+
+#color {
+  border-radius: 100px;
+  padding: 0;
 }

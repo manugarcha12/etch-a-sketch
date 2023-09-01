@@ -4,7 +4,7 @@ let color = "black";
 let clearBtn = document.querySelector("#reset");
 let grid = document.querySelector("#grid");
 let newDiv = document.querySelectorAll(".newdiv");
-let colorBtn = document.querySelector("#color");
+let colorBtn = document.querySelectorAll("#color");
 let eraserBtn = document.querySelector("#eraser");
 let rainbowBtn = document.querySelector("#rainbow");
 let pixelsBtn = document.querySelectorAll("#pixels");
@@ -45,20 +45,10 @@ function clear() {
   color = "black";
   createDivs();
 }
-function changeColor() {
+function changeColor(event) {
   rainbowMode = false;
-  let choice = prompt("Choose between red, blue, black, yellow, green");
-  if (choice === "blue") {
-    color = choice;
-  } else if (choice === "red") {
-    color = choice;
-  } else if (choice === "black") {
-    color = choice;
-  } else if (choice === "yellow") {
-    color = choice;
-  } else if (choice === "green") {
-    color = choice;
-  }
+  let choice = event.target.innerText.toLowerCase();
+  color = choice;
 }
 function eraser() {
   rainbowMode = false;
@@ -82,11 +72,16 @@ function changePixels(event) {
   console.log(choice);
 }
 clearBtn.addEventListener("click", clear);
-colorBtn.addEventListener("click", changeColor);
+colorBtn.forEach((button) => {
+  button.addEventListener("click", changeColor);
+});
 eraserBtn.addEventListener("click", eraser);
 rainbowBtn.addEventListener("click", rainbow);
 pixelsBtn.forEach((button) => {
   button.addEventListener("click", changePixels);
+});
+colorBtn.forEach((button) => {
+  button.addEventListener("click", changeColor);
 });
 
 createDivs();
