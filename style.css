@@ -1,10 +1,10 @@
 body {
-  background-color: rgb(4, 28, 60);
+  background-color: rgb(184, 197, 213);
 }
 .header {
   display: flex;
   justify-content: center;
-  color: white;
+  color: black;
 }
 #grid {
   display: flex;
@@ -12,13 +12,13 @@ body {
   align-items: center;
   height: 650px;
   gap: 20px;
-  background-color: rgba(143, 141, 206, 0.39);
+  background-color: rgba(126, 126, 136, 0.265);
   border-radius: 10px;
 }
 #container {
   display: flex;
   justify-content: center;
-
+  box-shadow: 10px rgb(184, 197, 213);
   width: 600px;
   height: 600px;
   border: 2px solid black;
@@ -32,6 +32,7 @@ body {
   flex-direction: column;
   width: 400px;
   gap: 10px;
+  color: rgb(104, 112, 131);
 }
 
 button {
